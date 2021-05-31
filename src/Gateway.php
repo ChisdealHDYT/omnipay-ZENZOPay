@@ -1,6 +1,6 @@
 <?php
 
-namespace Omnipay\CheckoutCom;
+namespace Omnipay\ZENZOPay;
 
 use Omnipay\Common\AbstractGateway;
 
@@ -16,50 +16,39 @@ class Gateway extends AbstractGateway
      */
     public function getName()
     {
-        return 'CheckoutCom';
+        return 'ZENZOPay';
     }
 
     public function getDefaultParameters()
     {
         return array(
-            'secretApiKey' => '',
-            'publicApiKey' => '',
-            'testMode' => false,
+            'address' => '',
+            'amount' => '',
         );
     }
-
-    public function getSecretApiKey()
+    
+    public function getAddress()
     {
-        return $this->getParameter('secretApiKey');
+        return $this->getParameter('address');
     }
-
-    public function setSecretApiKey($value)
+    
+    public function getAmount()
     {
-        return $this->setParameter('secretApiKey', $value);
-    }
-
-    public function getPublicApiKey()
-    {
-        return $this->getParameter('publicApiKey');
-    }
-
-    public function setPublicApiKey($value)
-    {
-        return $this->setParameter('publicApiKey', $value);
+        return $this->getParameter('amount');
     }
 
     public function purchase(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\CheckoutCom\Message\PurchaseRequest', $parameters);
+        return $this->createRequest('\Omnipay\ZENZOPay\Message\PurchaseRequest', $parameters);
     }
 
     public function completePurchase(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\CheckoutCom\Message\CompletePurchaseRequest', $parameters);
+        return $this->createRequest('\Omnipay\ZENZOPay\Message\CompletePurchaseRequest', $parameters);
     }
 
-    public function cardTokenPurchase(array $parameters = array())
+   /* public function cardTokenPurchase(array $parameters = array())
     {
         return $this->createRequest('\Omnipay\CheckoutCom\Message\CardTokenPurchaseRequest', $parameters);
-    }
+    }*/
 }
