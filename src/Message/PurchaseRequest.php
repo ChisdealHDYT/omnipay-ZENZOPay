@@ -3,12 +3,12 @@
  * CheckoutCom Purchase Request
  */
 
-namespace Omnipay\CheckoutCom\Message;
+namespace Omnipay\ZENZOPay\Message;
 
 /**
- * CheckoutCom Purchase Request
+ * ZENZOPay Purchase Request
  *
- * @link https://www.checkout.com/docs/api/API-reference/payment-tokens/create-payment-token
+ * 
  */
 class PurchaseRequest extends AbstractRequest
 {
