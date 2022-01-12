@@ -5,7 +5,7 @@ namespace Omnipay\ZENZOPay;
 use Omnipay\Common\AbstractGateway;
 
 /**
- * CheckoutCom Class
+ * ZENZOPay Class
  */
 class Gateway extends AbstractGateway
 {
@@ -46,9 +46,5 @@ class Gateway extends AbstractGateway
     {
         return $this->createRequest('\Omnipay\ZENZOPay\Message\CompletePurchaseRequest', $parameters);
     }
-
-   /* public function cardTokenPurchase(array $parameters = array())
-    {
-        return $this->createRequest('\Omnipay\CheckoutCom\Message\CardTokenPurchaseRequest', $parameters);
-    }*/
+    
 }
