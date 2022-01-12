@@ -1,19 +1,9 @@
 <?php
-/**
- * CheckoutCom Response
- */
 
-namespace Omnipay\CheckoutCom\Message;
+namespace Omnipay\ZENZOPay\Message;
 
 use Omnipay\Common\Message\RedirectResponseInterface;
 
-/**
- * CheckoutCom Response
- *
- * This is the response class for all CheckoutCom requests.
- *
- * @see \Omnipay\CheckoutCom\Gateway
- */
 class PurchaseResponse extends AbstractResponse implements RedirectResponseInterface
 {
     protected $redirectEndpoint = null;
